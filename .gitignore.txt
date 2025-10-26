@@ -1,0 +1,33 @@
+# Ignore Visual Studio files
+.vs/
+*.suo
+*.user
+*.cache
+
+# Ignore build outputs
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Ignore NuGet packages
+packages/
+
+# Ignore local databases
+*.mdf
+*.ldf
+
+# Ignore temp and log files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Ignore publish profiles
+*.pubxml
+*.Publish.xml
+
+# Ignore misc
+Thumbs.db
+Desktop.ini
