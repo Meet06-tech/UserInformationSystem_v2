@@ -4,8 +4,8 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" href="../Css/profile.css" />
     <title></title>
+    <link rel="stylesheet" href="../Css/style.css" />
 </head>
 <body>
     <form id="form1" runat="server">

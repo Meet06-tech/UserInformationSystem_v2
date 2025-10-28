@@ -55,7 +55,12 @@ namespace UserInformationSystem_v2.Pages
                         lblState.Text = reader["State"].ToString();
 
                         string photoPath = reader["Photo"].ToString();
-                        imgProfile.Src = string.IsNullOrEmpty(photoPath) ? "../Images/default.jpg" : "../" + photoPath;
+
+                        if (String.IsNullOrEmpty(photoPath))
+                            imgProfile.Src = ResolveUrl("~/Images/default.jpg");
+                        else
+                            imgProfile.Src = ResolveUrl("~/" + photoPath);
+
                     }
 
                     reader.Close();

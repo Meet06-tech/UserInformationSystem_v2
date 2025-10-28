@@ -68,8 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\local.mdf" />
-    <Content Include="Css\profile.css" />
     <Content Include="Css\register.css" />
+    <Content Include="Css\style.css" />
     <Content Include="Css\StyleSheet.css" />
     <Content Include="Pages\AchievementsList.aspx" />
     <Content Include="Pages\login.aspx" />
