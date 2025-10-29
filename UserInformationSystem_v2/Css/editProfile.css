@@ -7,35 +7,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
-/* Login Container */
-.login-container {
+/* Container */
+.edit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Card Styling */
+.edit-card {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    width: 350px;
-    padding: 30px;
-    text-align: center;
+    width: 500px;
+    padding: 30px 40px;
     transition: transform 0.3s ease;
 }
 
-    .login-container:hover {
+    .edit-card:hover {
         transform: translateY(-5px);
     }
 
     /* Heading */
-    .login-container h2 {
-        margin-bottom: 20px;
-        font-size: 24px;
+    .edit-card h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 26px;
         color: #333;
     }
 
-/* Form Groups */
+/* Form Group */
 .form-group {
     margin-bottom: 18px;
-    text-align: left;
 }
 
     .form-group label {
@@ -45,8 +52,8 @@ body {
         margin-bottom: 6px;
     }
 
-/* Input Controls */
-.input-control {
+/* Input Fields */
+.input-box {
     width: 100%;
     padding: 10px 12px;
     border: 1px solid #ccc;
@@ -55,54 +62,54 @@ body {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-    .input-control:focus {
+    .input-box:focus {
         border-color: #74ebd5;
         box-shadow: 0 0 6px rgba(116, 235, 213, 0.6);
         outline: none;
     }
 
-/* Remember Me */
-.remember-group {
+/* File Upload */
+.file-upload {
+    font-size: 14px;
+    padding: 6px;
+}
+
+/* Button Group */
+.btn-group {
     display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: #555;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 /* Buttons */
 .btn {
-    width: 100%;
+    flex: 1;
     padding: 12px;
     border: none;
     border-radius: 8px;
-    background: #74ebd5;
-    color: #fff;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-    .btn:hover {
+.save-btn {
+    background: #74ebd5;
+    color: #fff;
+}
+
+    .save-btn:hover {
         background: #5ac8c8;
         transform: scale(1.05);
     }
 
-/* Register Link */
-.link {
-    font-size: 13px;
-    color: #555;
+.cancel-btn {
+    background: #ff6b6b;
+    color: #fff;
 }
 
-    .link a {
-        color: #74ebd5;
-        font-weight: bold;
-        text-decoration: none;
-        margin-left: 5px;
-        transition: color 0.3s ease;
+    .cancel-btn:hover {
+        background: #e63946;
+        transform: scale(1.05);
     }
-
-        .link a:hover {
-            color: #5ac8c8;
-        }

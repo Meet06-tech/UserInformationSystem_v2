@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link rel="stylesheet" href="../Css/StyleSheet.css" />
+    <link rel="stylesheet" href="../Css/register.css" />
     <title></title>
 </head>
 <body>
