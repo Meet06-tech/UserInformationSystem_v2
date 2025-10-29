@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
@@ -18,12 +19,21 @@ namespace UserInformationSystem_v2.Pages
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            string conn_string = "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UserInfoDB;Integrated Security=True";
+            string conn_string = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=UserInfoDB;Integrated Security=True";
 
+            // --- Collect user input ---
             string firstName = txtFirstName.Text.Trim();
             string lastName = txtLastName.Text.Trim();
             string gender = rbMale.Checked ? "Male" : rbFemale.Checked ? "Female" : "";
-            DateTime birthDate = DateTime.Parse(txtDOB.Text);
+
+            // --- Validate date ---
+            DateTime birthDate;
+            if (!DateTime.TryParse(txtDOB.Text, out birthDate))
+            {
+                Response.Write("<script>alert('Please enter a valid date of birth.');</script>");
+                return;
+            }
+
             string email = txtEmail.Text.Trim();
             string phone = txtPhone.Text.Trim();
             string address = txtAddress.Text.Trim();
@@ -34,55 +44,59 @@ namespace UserInformationSystem_v2.Pages
             string password = txtPassword.Text.Trim();
             string photoPath = "";
 
+            // --- Handle photo upload ---
             if (filePhoto.HasFile)
             {
                 string folderpath = Server.MapPath("~/uploads/");
                 if (!Directory.Exists(folderpath))
-                {
                     Directory.CreateDirectory(folderpath);
-                }
 
-                string filename = Path.GetFileName(filePhoto.FileName);
+                string filename = Path.GetFileNameWithoutExtension(filePhoto.FileName);
+                string extension = Path.GetExtension(filePhoto.FileName);
+                filename = filename + "_" + DateTime.Now.Ticks + extension;
+
                 string fullpath = Path.Combine(folderpath, filename);
                 filePhoto.SaveAs(fullpath);
                 photoPath = "uploads/" + filename;
             }
 
+            // --- Insert data using ADO.NET ---
             string query = @"INSERT INTO tblUsers 
-                            (Firstname, Lastname, Gender, Birthdate, Email, Phone, Address, Pincode, City, State, Username, Password, Photo) 
+                            (Firstname, Lastname, Gender, Birthdate, Email, Phone, Address, Pincode, City, State, Username, Password, Photo)
                             VALUES (@Firstname, @Lastname, @Gender, @Birthdate, @Email, @Phone, @Address, @Pincode, @City, @State, @Username, @Password, @Photo)";
 
             using (SqlConnection conn = new SqlConnection(conn_string))
             {
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Firstname", firstName);
-                    cmd.Parameters.AddWithValue("@Lastname", lastName);
-                    cmd.Parameters.AddWithValue("@Gender", gender);
-                    cmd.Parameters.AddWithValue("@Birthdate", birthDate);
-                    cmd.Parameters.AddWithValue("@Email", email);
-                    cmd.Parameters.AddWithValue("@Phone", phone);
-                    cmd.Parameters.AddWithValue("@Address", address);
-                    cmd.Parameters.AddWithValue("@Pincode", pincode);
-                    cmd.Parameters.AddWithValue("@City", city);
-                    cmd.Parameters.AddWithValue("@State", state);
-                    cmd.Parameters.AddWithValue("@Username", username);
-                    cmd.Parameters.AddWithValue("@Password", password);
-                    cmd.Parameters.AddWithValue("@Photo", photoPath);
+                    cmd.Parameters.Add("@Firstname", SqlDbType.NVarChar, 50).Value = firstName;
+                    cmd.Parameters.Add("@Lastname", SqlDbType.NVarChar, 50).Value = lastName;
+                    cmd.Parameters.Add("@Gender", SqlDbType.NVarChar, 10).Value = gender;
+                    cmd.Parameters.Add("@Birthdate", SqlDbType.Date).Value = birthDate;
+                    cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 100).Value = email;
+                    cmd.Parameters.Add("@Phone", SqlDbType.NVarChar, 15).Value = phone;
+                    cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 200).Value = address;
+                    cmd.Parameters.Add("@Pincode", SqlDbType.NVarChar, 10).Value = pincode;
+                    cmd.Parameters.Add("@City", SqlDbType.NVarChar, 50).Value = city;
+                    cmd.Parameters.Add("@State", SqlDbType.NVarChar, 50).Value = state;
+                    cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 50).Value = username;
+                    cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 100).Value = password;
+                    cmd.Parameters.Add("@Photo", SqlDbType.NVarChar, 200).Value = photoPath;
 
                     try
                     {
                         conn.Open();
                         cmd.ExecuteNonQuery();
 
-
-                        Response.Write("<script>alert('Registration Successful! Redirecting to login page...');</script>");
-                        Response.Redirect("loginform.aspx", false);
-                        Context.ApplicationInstance.CompleteRequest();
+                        // Success alert and redirect
+                        Response.Write("<script>alert('Registration Successful! Redirecting to login page...'); window.location='login.aspx';</script>");
                     }
-                    catch (Exception ex)
+                    catch (SqlException ex)
                     {
-                        Response.Write("<script>alert('Registration Failed: " + ex.Message + "');</script>");
+                        if (ex.Number == 2627) // Unique username constraint
+                            Response.Write("<script>alert('Username already exists. Please choose another.');</script>");
+                        else
+                            Response.Write("<script>alert('Registration failed: " + ex.Message + "');</script>");
                     }
                 }
             }
