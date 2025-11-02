@@ -1,0 +1,206 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f7fa;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Edit Profile Container */
+.edit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.edit-card {
+    background: #ffffff;
+    width: 900px;
+    max-width: 100%;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+    .edit-card h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 26px;
+        color: #4e73df;
+        font-weight: 600;
+    }
+
+/* Two Column Grid Layout */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 30px;
+    margin-bottom: 20px;
+}
+
+/* Form Group Styling */
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+    .form-group label {
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
+
+/* Full width fields */
+.form-group-full {
+    grid-column: span 2;
+}
+
+/* Input Styling */
+.input-box {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+    color: #374151;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    .input-box:focus {
+        outline: none;
+        border-color: #4e73df;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.1);
+    }
+
+    .input-box:hover {
+        border-color: #9ca3af;
+        background-color: #ffffff;
+    }
+
+/* Textarea Styling */
+textarea.input-box {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Dropdown Styling */
+select.input-box {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+/* File Upload Styling */
+.file-upload {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+    .file-upload:hover {
+        background-color: #ffffff;
+        border-color: #9ca3af;
+    }
+
+/* Button Group */
+.btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Button Styling */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.save-btn {
+    background: #4e73df;
+    color: white;
+}
+
+    .save-btn:hover {
+        background: #3a5bc7;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(78, 115, 223, 0.3);
+    }
+
+    .save-btn:active {
+        transform: translateY(0);
+    }
+
+.cancel-btn {
+    background: #858796;
+    color: white;
+}
+
+    .cancel-btn:hover {
+        background: #6e707e;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(133, 135, 150, 0.3);
+    }
+
+    .cancel-btn:active {
+        transform: translateY(0);
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .edit-container {
+        margin-top: 20px;
+    }
+
+    .edit-card {
+        width: 100%;
+        padding: 25px;
+    }
+
+        .edit-card h2 {
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .form-group-full {
+        grid-column: span 1;
+    }
+
+    .btn-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
