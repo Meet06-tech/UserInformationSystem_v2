@@ -1,0 +1,150 @@
+﻿
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f9; 
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
+}
+
+
+#form1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    color: #2c3e50; 
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1em;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 15px;
+}
+
+
+
+.form-card {
+    width: 100%;
+    max-width: 550px; 
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.input-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+    .input-group label {
+        display: block;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-size: 0.95em;
+    }
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+    .input:focus {
+        border-color: #3498db;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+
+
+
+.button-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-end;
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.95em;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+    .btn:active {
+        transform: translateY(1px);
+    }
+
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #2980b9;
+    }
+
+
+.btn-secondary {
+    background-color: #7f8c8d; 
+    color: white;
+}
+
+    .btn-secondary:hover {
+        background-color: #6c7a7e;
+    }
+
+
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 10px;
+        align-items: flex-start; 
+    }
+
+    .form-card {
+        padding: 20px;
+    }
+
+    .button-actions {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn {
+        width: 100%; 
+    }
+}

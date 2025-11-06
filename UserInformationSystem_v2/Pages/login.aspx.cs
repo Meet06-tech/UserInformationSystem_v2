@@ -55,7 +55,7 @@ namespace UserInformationSystem_v2.Pages
                         }
 
                         Response.Write("<script>alert('Login Successful!');</script>");
-                        Response.Redirect("profile.aspx"); 
+                        Response.Redirect("dashboard.aspx"); 
                     }
                     else
                     {

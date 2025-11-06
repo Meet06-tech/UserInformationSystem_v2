@@ -11,7 +11,7 @@ namespace UserInformationSystem_v2.Pages
 {
 
 
-    public partial class AchievementsList
+    public partial class dashboard
     {
 
         /// <summary>
@@ -24,66 +24,75 @@ namespace UserInformationSystem_v2.Pages
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// pnlNoData control.
+        /// imgProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlNoData;
+        protected global::System.Web.UI.HtmlControls.HtmlImage imgProfile;
 
         /// <summary>
-        /// btnAddAchievement control.
+        /// lblName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddAchievement;
+        protected global::System.Web.UI.WebControls.Label lblName;
 
         /// <summary>
-        /// pnlData control.
+        /// lblEmail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel pnlData;
+        protected global::System.Web.UI.WebControls.Label lblEmail;
 
         /// <summary>
-        /// gvAchievements control.
+        /// btnProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gvAchievements;
+        protected global::System.Web.UI.WebControls.Button btnProfile;
 
         /// <summary>
-        /// btnBack control.
+        /// btnEditProfile control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnBack;
+        protected global::System.Web.UI.WebControls.Button btnEditProfile;
 
         /// <summary>
-        /// Button1 control.
+        /// lblTotalAchievements control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Label lblTotalAchievements;
 
         /// <summary>
-        /// btnAddNew control.
+        /// btnAchievements control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddNew;
+        protected global::System.Web.UI.WebControls.Button btnAchievements;
+
+        /// <summary>
+        /// btnLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnLogout;
     }
 }
