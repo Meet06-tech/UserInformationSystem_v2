@@ -14,13 +14,13 @@
                 <h2>Edit Profile</h2>
                 
                 <div class="form-grid">
-                    <!-- Column 1 -->
+                   
                     <div class="form-group">
                         <label>First Name</label>
                         <asp:TextBox ID="txtFirstName" runat="server" CssClass="input-box"></asp:TextBox>
                     </div>
                     
-                    <!-- Column 2 -->
+                    
                     <div class="form-group">
                         <label>Last Name</label>
                         <asp:TextBox ID="txtLastName" runat="server" CssClass="input-box"></asp:TextBox>
@@ -60,7 +60,7 @@
                         <asp:TextBox ID="txtState" runat="server" CssClass="input-box"></asp:TextBox>
                     </div>
                     
-                    <!-- Full width fields -->
+                   
                     <div class="form-group form-group-full">
                         <label>Address</label>
                         <asp:TextBox ID="txtAddress" runat="server" CssClass="input-box" TextMode="MultiLine"></asp:TextBox>

@@ -11,7 +11,7 @@ body {
     padding: 20px;
 }
 
-/* Profile Page Styling */
+
 .profile-container {
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ body {
     flex-wrap: wrap;
 }
 
-/* Button Styling */
+
 .btn {
     background: #4e73df;
     color: white;
@@ -125,7 +125,7 @@ body {
         box-shadow: 0 4px 12px rgba(231, 74, 59, 0.3);
     }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .profile-container {
         margin-top: 30px;

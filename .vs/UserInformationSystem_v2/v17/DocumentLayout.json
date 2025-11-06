@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{1796C9BB-DA8F-468C-B885-DA3B48288DA0}|UserInformationSystem_v2\\UserInformationSystem_v2.csproj|f:\\college\\.net case study\\final case study with git\\userinformationsystem_v2\\userinformationsystem_v2\\pages\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{1796C9BB-DA8F-468C-B885-DA3B48288DA0}|UserInformationSystem_v2\\UserInformationSystem_v2.csproj|solutionrelative:userinformationsystem_v2\\pages\\login.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1796C9BB-DA8F-468C-B885-DA3B48288DA0}|UserInformationSystem_v2\\UserInformationSystem_v2.csproj|f:\\college\\.net case study\\final case study with git\\userinformationsystem_v2\\userinformationsystem_v2\\pages\\updateprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{1796C9BB-DA8F-468C-B885-DA3B48288DA0}|UserInformationSystem_v2\\UserInformationSystem_v2.csproj|solutionrelative:userinformationsystem_v2\\pages\\updateprofile.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1796C9BB-DA8F-468C-B885-DA3B48288DA0}|UserInformationSystem_v2\\UserInformationSystem_v2.csproj|f:\\college\\.net case study\\final case study with git\\userinformationsystem_v2\\userinformationsystem_v2\\css\\updateprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{1796C9BB-DA8F-468C-B885-DA3B48288DA0}|UserInformationSystem_v2\\UserInformationSystem_v2.csproj|solutionrelative:userinformationsystem_v2\\css\\updateprofile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,34 +26,7 @@
               "RelativeToolTip": "UserInformationSystem_v2\\Pages\\login.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-02T09:43:04.803Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "updateprofile.css",
-              "DocumentMoniker": "F:\\COLLEGE\\.Net Case Study\\Final case study with git\\UserInformationSystem_v2\\UserInformationSystem_v2\\Css\\updateprofile.css",
-              "RelativeDocumentMoniker": "UserInformationSystem_v2\\Css\\updateprofile.css",
-              "ToolTip": "F:\\COLLEGE\\.Net Case Study\\Final case study with git\\UserInformationSystem_v2\\UserInformationSystem_v2\\Css\\updateprofile.css",
-              "RelativeToolTip": "UserInformationSystem_v2\\Css\\updateprofile.css",
-              "ViewState": "AgIAAKwAAAAAAAAAAAAQwM4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-11-02T10:02:52.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "updateProfile.aspx",
-              "DocumentMoniker": "F:\\COLLEGE\\.Net Case Study\\Final case study with git\\UserInformationSystem_v2\\UserInformationSystem_v2\\Pages\\updateProfile.aspx",
-              "RelativeDocumentMoniker": "UserInformationSystem_v2\\Pages\\updateProfile.aspx",
-              "ToolTip": "F:\\COLLEGE\\.Net Case Study\\Final case study with git\\UserInformationSystem_v2\\UserInformationSystem_v2\\Pages\\updateProfile.aspx",
-              "RelativeToolTip": "UserInformationSystem_v2\\Pages\\updateProfile.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-11-02T10:01:07.893Z",
+              "WhenOpened": "2025-11-06T17:07:17.722Z",
               "EditorCaption": ""
             }
           ]

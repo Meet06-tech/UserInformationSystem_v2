@@ -68,14 +68,21 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\local.mdf" />
+    <Content Include="Css\achievements.css" />
+    <Content Include="Css\Achievementslist.css" />
     <Content Include="Css\login1.css" />
     <Content Include="Css\profile.css" />
     <Content Include="Css\register1.css" />
+    <Content Include="Css\StyleSheet1.css" />
+    <Content Include="Css\updateAchievement.css" />
     <Content Include="Css\updateprofile.css" />
     <Content Include="Pages\AchievementsList.aspx" />
+    <Content Include="Pages\AddAchievement.aspx" />
+    <Content Include="Pages\dashboard.aspx" />
     <Content Include="Pages\login.aspx" />
     <Content Include="Pages\profile.aspx" />
     <Content Include="Pages\register.aspx" />
+    <Content Include="Pages\UpdateAchievement.aspx" />
     <Content Include="Pages\updateProfile.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -87,6 +94,20 @@
     </Compile>
     <Compile Include="Pages\AchievementsList.aspx.designer.cs">
       <DependentUpon>AchievementsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddAchievement.aspx.cs">
+      <DependentUpon>AddAchievement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\AddAchievement.aspx.designer.cs">
+      <DependentUpon>AddAchievement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\dashboard.aspx.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\dashboard.aspx.designer.cs">
+      <DependentUpon>dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -108,6 +129,13 @@
     </Compile>
     <Compile Include="Pages\register.aspx.designer.cs">
       <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\UpdateAchievement.aspx.cs">
+      <DependentUpon>UpdateAchievement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\UpdateAchievement.aspx.designer.cs">
+      <DependentUpon>UpdateAchievement.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\updateProfile.aspx.cs">
       <DependentUpon>updateProfile.aspx</DependentUpon>
